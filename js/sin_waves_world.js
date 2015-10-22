@@ -33,15 +33,6 @@ SinWavesWorld.prototype.update = function(gameTime) {
     this.circle.x = this.canvas.width / 2;
     this.circle.y = (this.canvas.height / 2) + (this.canvas.height * sin);
 
-    if(this.pointsTime >= this.pointsSpawnTime) {
-        this.pointsTime = 0;
-        this.points.push({
-            radius: this.point.radius,
-            x: this.circle.x,
-            y: this.circle.y
-        });
-    }
-
     for(var idx in this.points) {
         var point = this.points[idx];
         point.x += this.pointsSpeed * gameTime.time;
@@ -49,6 +40,15 @@ SinWavesWorld.prototype.update = function(gameTime) {
         if(point.x > this.canvas.width) {
             this.points.splice(idx, 1);
         }
+    }
+
+    if(this.pointsTime >= this.pointsSpawnTime) {
+        this.pointsTime = 0;
+        this.points.push({
+            radius: this.point.radius,
+            x: this.circle.x,
+            y: this.circle.y
+        });
     }
 };
 
