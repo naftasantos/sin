@@ -1,0 +1,23 @@
+{
+  "name": "Sin Waves",
+  "version": "1.0.000",
+  "description": "Sin Waves",
+  "author": {
+    "name": "Naftali Andrade Santos",
+    "team": "NAS"
+  },
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dependencies",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+    "jquery": null
+  }
+}
